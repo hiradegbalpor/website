@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <style>
+    body {
+                       background-color: #000;
+           color: #333;
+           text-align: center;
+       }
+.login {
+  width: 340px;
+  height: 400px;
+  background: #2c2c2c;
+  padding: 47px;
+  padding-bottom: 57px;
+  color: #fff;
+  border-radius: 17px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px 18px;
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+  border-radius: 100px;
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.login input:focus {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 13px;
+  margin: 40px 0 0 0;
+  border-radius: 500px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+.h1 {
+  padding: 0;
+  position: relative;
+  top: -35px;
+  display: block;
+  margin-bottom: -0px;
+  font-size: 1.3em;
+}
+
+.btn {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  padding: 16px !important;
+}
+
+.btn:hover {
+  background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.login input[type=text] {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=password] {
+  animation: bounce1 1.3s;
+}
+
+.ui {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+  border-image-slice: 1;
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+/* From Uiverse.io by Pankaj-Meharchandani */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --animation: 2s ease-in-out infinite;
+}
+
+.loader .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: solid 2px transparent;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: transparent;
+  animation: circle-keys var(--animation);
+}
+
+.loader .circle .dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: dot-keys var(--animation);
+}
+
+.loader .circle .outline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: outline-keys var(--animation);
+}
+
+.circle:nth-child(1) {
+  --color: #4285f4; /* Blue */
+  border-color: var(--color);
+}
+
+.circle:nth-child(1) .dot {
+  background-color: var(--color);
+}
+
+.circle:nth-child(2) {
+  --color: #ea4335; /* Red */
+  border-color: var(--color);
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(2) .dot {
+  background-color: var(--color);
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  --color: #fbbc05; /* Yellow */
+  border-color: var(--color);
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(3) .dot {
+  background-color: var(--color);
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) {
+  --color: #34a853; /* Green */
+  border-color: var(--color);
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(4) .dot {
+  background-color: var(--color);
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) {
+  --color: #4285f4; /* Blue (repeat for continuity) */
+  border-color: var(--color);
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(5) .dot {
+  background-color: var(--color);
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(1) .outline {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(2) .outline {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(3) .outline {
+  animation-delay: 1.5s;
+}
+
+.circle:nth-child(4) .outline {
+  animation-delay: 1.8s;
+}
+
+.circle:nth-child(5) .outline {
+  animation-delay: 2.1s;
+}
+
+@keyframes circle-keys {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dot-keys {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes outline-keys {
+  0% {
+    transform: scale(0);
+    outline: solid 20px var(--color);
+    outline-offset: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    outline: solid 0 transparent;
+    outline-offset: 20px;
+    opacity: 0;
+  }
+}
+/* From Uiverse.io by cssbuttons-io */
+button {
+  align-items:center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+
+</style>
+</head>
+<button type="button" onclick="window.location.href='ss.html'">back</button>
+
+<div class="loader">
+  <div class="circle">
+    <div class="dot"></div>
+    <div class="outline"></div>
+  </div>
+  <div class="circle">
+    <div class="dot"></div>
+    <div class="outline"></div>
+  </div>
+  <div class="circle">
+    <div class="dot"></div>
+    <div class="outline"></div>
+  </div>
+  <div class="circle">
+    <div class="dot"></div>
+    <div class="outline"></div>
+  </div>
+</div>
+<div class="login wrap">
+  <div class="h1">Login</div>
+  <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Email" id="email" name="email" type="text">
+  <input placeholder="Password" id="password" name="password" type="password">
+  <input value="Login" class="btn" type="submit">
+</div>
+
+
+
+</body>
+</html>
